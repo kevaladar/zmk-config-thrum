@@ -34,16 +34,17 @@
 
         num {
             status = "reserved";
-
+        };
         pad {
             status = "reserved";
-            
+        };
+           
         func {
             status = "reserved";
+        };
             
         macro {
             status = "reserved";
-            
         };
     };
 }
