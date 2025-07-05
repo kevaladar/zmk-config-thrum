@@ -19,7 +19,7 @@
             bindings = <
                 &none   &none   &bootloader &studio_unlock  &none   &none   &studio_unlock  &bootloader &none   &none
                 &none   &none   &bt BT_CLR  &none           &none	&none   &none           &bt BT_CLR    &none   &none
-                        &bt SEL_2   &bt SEL_1   &bt SEL_0                   &bt SEL_0           &bt SEL_1    &bt SEL_2 
+                        &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0                   &bt BT_SEL 0           &bt BT_SEL 1    &bt BT_SEL 2 
                                                &none           &none		&none           &none
             >;
         };
