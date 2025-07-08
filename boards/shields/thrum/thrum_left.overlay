@@ -1,10 +1,4 @@
-#include "thrum.dtsi" // The shared dtsi file is included in the overlay
-
-// Label of the kscan node in the dtsi
-
-
-
-
+#include "thrum.dtsi" 
 
 &kscan0 {
     col-gpios
