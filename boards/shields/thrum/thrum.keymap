@@ -12,7 +12,7 @@
                         &kp X   &kp M   &kp D   						&kp G   &kp COMMA   &kp DOT
                                         &mo 1	&kp LSHFT       		&kp SPACE   &mo 2
             >;
-        };2/
+        };
 
         blt {
             display-name = "BLT";
