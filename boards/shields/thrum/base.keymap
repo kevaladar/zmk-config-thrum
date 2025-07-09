@@ -91,7 +91,6 @@
         rbkt { key-positions = <8 18>; bindings = <&kp RBKT>; layers = <DEF SYM NUM>; };
     };
 
-/ {
     keymap {
         compatible = "zmk,keymap";
 
@@ -130,13 +129,8 @@
             >;
         };
 
-        };
-
         fun {
             status = "reserved";
-        };
-            
-
-        };
+        };          
     };
 };
