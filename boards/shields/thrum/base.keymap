@@ -31,7 +31,6 @@
 
 /* More keys */
 #define REP &key_repeat
-#define COM KP_COMMA
 #define SPC SPACE
 
 / {
@@ -96,41 +95,48 @@
 
         def_layer {
             bindings = <
-                &mt M0 V &kp L    &kp H    &kp K    &kp W    &kp P    &kp F    &kp O    &kp U    &mt M0 SQT
-                &kp S    &mt M1 R &mt M2 N &mt M3 T &kp B    &kp Y    &mt M2 C &mt M1 A &mt M0 E &kp I
-                         &kp X    &kp M    &kp D   				      &kp G    &kp COM  &kp DOT
+                &mt M0 V &kp L    &kp H    &kp K    &kp W    &kp P    &kp F    &kp O     &kp U    &mt M0 SQT
+                &kp S    &mt M1 R &mt M2 N &mt M3 T &kp B    &kp Y    &mt M2 C &mt M1 A  &mt M0 E &kp I
+                         &kp X    &kp M    &kp D   				      &kp G    &kp COMMA &kp DOT
                                            &mo 1	REP      &kp SPC  &mo 2
             >;
         };
 
         nav_layer {
             bindings = <
-                &kp SWIN &kp STAB &kp KWIN &kp KTAB &kp RSTO &kp PG_UP &kp END  &kp UP   &kp HOME  &kp DEL
-                &kp M0   &kp M1   &kp M2   &kp M3   &none    &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp RET
-                         &kp CUT  &kp COP  &kp PST                     &kp BSPC &kp TAB  &trans
-                                           &trans   &trans   &trans    &mo 3
+                &kp SWIN &kp STAB &kp KWIN &kp KTAB &kp RSTO  &kp PG_UP &kp END  &kp UP   &kp HOME  &kp DEL
+                &kp M0   &kp M1   &kp M2   &kp M3   &kp PSCRN &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp RET
+                         &kp CUT  &kp COP  &kp PST                      &kp BSPC &kp TAB  &trans
+                                           &trans   &trans    &trans    &mo 3
             >;  
         };
 
         sym {
-            status = "reserved";
+            bindings = < 
+                &none    &none    &none    &none    &none    &none    &none    &none    &none    &none   
+                &none    &none    &none    &none    &none    &none    &kp M3   &kp M2   &kp M1   &kp M0
+                         &none    &none    &none                      &none    &none    &none
+                                           &mo 3    &trans   &trans   &trans
+            >;  
+
         };
 
         num_layer {
-            status = "reserved";
+            bindings = <
+                &none    &none    &none    &none    &kp DOT   &kp COMMA &none  &none    &none    &none   
+                &kp N6   &kp N4   &kp N0   &kp N2   &kp EQUAL &kp PRCNT &kp N3 &kp N1   &kp N5   &kp N7
+                        &kp MINUS &kp PLUS &kp N8                       &kp N9 &kp STAR &kp SLASH
+                                           &none    &none     &none     &none
+            >;  
         };    
 
-        blt {
-            bindings = <
-                &none   &none   &bootloader &none  &none   &none   &none  &bootloader &none   &none
-                &none   &none   &bt BT_CLR  &none           &none	&none   &none           &bt BT_CLR    &none   &none
-                        &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0  &bt BT_SEL 0           &bt BT_SEL 1    &bt BT_SEL 2 
-                                               &none           &none		&none           &none
-            >;
-        };
-
         fun {
-            status = "reserved";
+            bindings = <
+                &bootloader &kp C_VOL_UP &kp C_MUTE &kp C_VOL_DN &kp C_SLEEP &kp K_LOCK &kp C_BRI_DN     &none  &kp C_BRI_UP    &none
+                &sys_reset  &bt BT_PRV   &bt BT_CLR &bt BT_NXT   &none    &none     &none     &none  &none    &none
+                            &kp C_PREV   &kp C_PLAY &kp C_NEXT       &none  &none    &none
+                                &none     &none  &none    &none
+            >;
         };          
     };
 };
