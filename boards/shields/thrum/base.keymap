@@ -6,6 +6,8 @@
 #define NAV 1
 #define SYM 2
 #define NUM 3
+#define BLT 4
+#define FUN 5
 
 /* Mod Sequence (Outer to Inner) */
 #define M0 LGUI
@@ -77,16 +79,16 @@
                 20  21  22             23  24  25
                         26  27     28  29              */
 
-        j { key-positions = <1 2>; bindings = <&kp J>; layers = <ALPHAS>; };
-        q { key-positions = <2 3>; bindings = <&kp Q>; layers = <ALPHAS>; };
-        z { key-positions = <20 21>; bindings = <&kp Z>; layers = <ALPHAS>; };
+        j { key-positions = <1 2>; bindings = <&kp J>; layers = <DEF>; };
+        q { key-positions = <2 3>; bindings = <&kp Q>; layers = <DEF>; };
+        z { key-positions = <20 21>; bindings = <&kp Z>; layers = <DEF>; };
 
-        lpar { key-positions = <3 13>; bindings = <&kp LPAR>; layers = <ALPHAS SYMBOLS NUMBERS>; };
-        rpar { key-positions = <6 16>; bindings = <&kp RPAR>; layers = <ALPHAS SYMBOLS NUMBERS>; };
-        lbrc { key-positions = <2 12>; bindings = <&kp LBRC>; layers = <ALPHAS SYMBOLS NUMBERS>; };
-        rbrc { key-positions = <7 17>; bindings = <&kp RBRC>; layers = <ALPHAS SYMBOLS NUMBERS>; };
-        lbkt { key-positions = <1 11>; bindings = <&kp LBKT>; layers = <ALPHAS SYMBOLS NUMBERS>; };
-        rbkt { key-positions = <8 18>; bindings = <&kp RBKT>; layers = <ALPHAS SYMBOLS NUMBERS>; };
+        lpar { key-positions = <3 13>; bindings = <&kp LPAR>; layers = <DEF SYM NUM>; };
+        rpar { key-positions = <6 16>; bindings = <&kp RPAR>; layers = <DEF SYM NUM>; };
+        lbrc { key-positions = <2 12>; bindings = <&kp LBRC>; layers = <DEF SYM NUM>; };
+        rbrc { key-positions = <7 17>; bindings = <&kp RBRC>; layers = <DEF SYM NUM>; };
+        lbkt { key-positions = <1 11>; bindings = <&kp LBKT>; layers = <DEF SYM NUM>; };
+        rbkt { key-positions = <8 18>; bindings = <&kp RBKT>; layers = <DEF SYM NUM>; };
     };
 
 / {
@@ -94,7 +96,6 @@
         compatible = "zmk,keymap";
 
         def_layer {
-            display-name = "DEF";
             bindings = <
                 &mt M0 V &kp L    &kp H    &kp K    &kp W    &kp P    &kp F    &kp O    &kp U    &mt M0 SQT
                 &kp S    &mt M1 R &mt M2 N &mt M3 T &kp B    &kp Y    &mt M2 C &mt M1 A &mt M0 E &kp I
@@ -104,7 +105,6 @@
         };
 
         nav_layer {
-            display-name = "NAV";
             bindings = <
                 &kp SWIN &kp STAB &kp KWIN &kp KTAB &kp RSTO &kp PG_UP &kp END  &kp UP   &kp HOME  &kp DEL
                 &kp M0   &kp M1   &kp M2   &kp M3   &none    &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp RET
@@ -116,13 +116,12 @@
         sym {
             status = "reserved";
         };
-        
+
         num_layer {
             status = "reserved";
-
         };    
+
         blt {
-            display-name = "BLT";
             bindings = <
                 &none   &none   &bootloader &none  &none   &none   &none  &bootloader &none   &none
                 &none   &none   &bt BT_CLR  &none           &none	&none   &none           &bt BT_CLR    &none   &none
@@ -132,16 +131,12 @@
         };
 
         };
-        pad {
-            status = "reserved";
-        };
-           
-        func {
+
+        fun {
             status = "reserved";
         };
             
-        macro {
-            status = "reserved";
+
         };
     };
 };
