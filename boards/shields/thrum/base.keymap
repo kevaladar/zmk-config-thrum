@@ -113,11 +113,14 @@
             >;  
         };
 
+        sym {
+            status = "reserved";
+        };
+        
         num_layer {
-            display-name = "NUM";
-            bindings = <
+            status = "reserved";
 
-            >;
+        };    
         blt {
             display-name = "BLT";
             bindings = <
@@ -126,10 +129,6 @@
                         &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0  &bt BT_SEL 0           &bt BT_SEL 1    &bt BT_SEL 2 
                                                &none           &none		&none           &none
             >;
-        };
-
-        sym {
-            status = "reserved";
         };
 
         };
