@@ -6,8 +6,7 @@
 #define NAV 1
 #define SYM 2
 #define NUM 3
-#define BLT 4
-#define FUN 5
+#define FUN 4
 
 /* Mod Sequence (Outer to Inner) */
 #define M0 LGUI
@@ -31,7 +30,6 @@
 
 /* More keys */
 #define REP &key_repeat
-#define SPC SPACE
 
 / {
     behaviors {
@@ -99,38 +97,38 @@
 
         def_layer {
             bindings = <
-                &mt M0 V &kp L    &kp H    &kp K    &kp W    &kp P    &kp F    &kp O     &kp U    &mt M0 SQT
-                &kp S    &mt M1 R &mt M2 N &mt M3 T &kp B    &kp Y    &mt M3 C &mt M2 A  &mt M1 E &kp I
-                         &kp X    &kp M    &kp D   				      &kp G    &kp COMMA &kp DOT
-                                           &mo 1	REP      &lt 4 SPACE  &mo 2
+                &mt M0 V  &kp L     &kp H     &kp K     &kp W     &kp P     &kp F     &kp O     &kp U     &mt M0 SQT
+                &kp S     &mt M1 R  &mt M2 N  &mt M3 T  &kp B     &kp Y     &mt M3 C  &mt M2 A  &mt M1 E  &kp I
+                          &kp X     &kp M     &kp D   				        &kp G     &kp COMMA &kp DOT
+                                           &mo 1	    REP       &lt 4 SPACE &mo 2
             >;
         };
 
         nav_layer {
             bindings = <
-                &kp SWIN &kp STAB &kp KWIN &kp KTAB &kp RSTO  &kp PG_UP &kp END  &kp UP   &kp HOME  &kp DEL
-                &kp M0   &kp M1   &kp M2   &kp M3   &kp PSCRN &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp RET
-                         &kp CUT  &kp COP  &kp PST                      &kp BSPC &kp TAB  &trans
-                                           &trans   &trans    &trans    &mo 3
+                &kp SWIN  &kp STAB  &kp KWIN  &kp KTAB  &kp RSTO  &kp PG_UP &kp END   &kp UP    &kp HOME  &kp DEL
+                &kp M0    &kp M1    &kp M2    &kp M3    &kp PSCRN &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp RET
+                          &kp CUT   &kp COP   &kp PST                       &kp BSPC  &kp TAB   &trans
+                                              &none     &tog 1    &kp SPACE &mo 3
             >;  
         };
 
         sym {
             bindings = < 
-                &none    &none    &none    &none    &none    &none    &none    &none    &none    &none   
-                &none    &none    &none    &none    &none    &none    &kp M3   &kp M2   &kp M1   &kp M0
-                         &none    &none    &none                      &none    &none    &none
-                                           &mo 3    &trans   &trans   &trans
+                &none     &none     &kp STAR  &kp DLLR  &kp AMPS  &kp PRCNT &kp AT    &kp COLON &kp SEMI  &none   
+                &kp EQUAL &kp GRAVE &kp MINUS &kp FSLH  &kp HASH  &none     &kp M3    &kp M2    &kp M1    &kp M0
+                          &kp TILDE &kp UNDER &kp BSLH                      &none     &none     &none
+                                              &mo 3     &trans    &kp SPACE &trans
             >;  
 
         };
 
         num_layer {
             bindings = <
-                &none    &none    &none    &none    &kp DOT   &kp COMMA &none  &none    &none    &none   
-                &kp N6   &kp N4   &kp N0   &kp N2   &kp EQUAL &kp PRCNT &kp N3 &kp N1   &kp N5   &kp N7
-                        &kp MINUS &kp PLUS &kp N8                       &kp N9 &kp STAR &kp SLASH
-                                           &none    &none     &none     &none
+                &none     &none     &none     &none     &kp DOT   &kp COMMA &none     &none     &none     &none   
+                &kp N6    &kp N4    &kp N0    &kp N2    &kp EQUAL &kp PRCNT &kp N3    &kp N1    &kp N5    &kp N7
+                          &kp MINUS &kp PLUS  &kp N8                        &kp N9    &kp STAR  &kp SLASH
+                                              &none     &none     &none     &none
             >;  
         };    
 
