@@ -106,7 +106,7 @@
 
         nav_layer {
             bindings = <
-                &kp SWIN  &kp STAB  &kp KWIN  &kp KTAB  &kp RSTO  &kp PG_UP &kp END   &kp UP    &kp HOME  &kp DEL
+                &kp SWIN  &kp STAB  &kp KWIN  &kp KTAB  &kp RSTO  &kp PG_UP &kp HOME  &kp UP    &kp END  &kp DEL
                 &kp M0    &kp M1    &kp M2    &kp M3    &kp PSCRN &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp RET
                           &kp CUT   &kp COP   &kp PST                       &kp BSPC  &kp LC(BSPC) &kp TAB
                                               &none     &none     &kp SPACE &mo 2
