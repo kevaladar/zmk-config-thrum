@@ -109,7 +109,7 @@
                 &kp SWIN  &kp STAB  &kp KWIN  &kp KTAB  &kp RSTO  &kp PG_UP &kp END   &kp UP    &kp HOME  &kp DEL
                 &kp M0    &kp M1    &kp M2    &kp M3    &kp PSCRN &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp RET
                           &kp CUT   &kp COP   &kp PST                       &kp BSPC  &kp TAB   &trans
-                                              &none     &tog 1    &kp SPACE &mo 3
+                                              &none     &none     &kp SPACE &mo 2
             >;  
         };
 
@@ -118,7 +118,7 @@
                 &none     &none     &kp STAR  &kp DLLR  &kp AMPS  &kp PRCNT &kp AT    &kp COLON &kp SEMI  &none   
                 &kp EQUAL &kp GRAVE &kp MINUS &kp FSLH  &kp HASH  &none     &kp M3    &kp M2    &kp M1    &kp M0
                           &kp TILDE &kp UNDER &kp BSLH                      &none     &none     &none
-                                              &mo 3     &trans    &kp SPACE &trans
+                                              &mo 1     &trans    &kp SPACE &trans
             >;  
 
         };
