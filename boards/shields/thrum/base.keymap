@@ -1,5 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+#include <dt-bindings/zmk/pointing.h>
 
 /* Layers */
 #define DEF 0
@@ -7,6 +10,7 @@
 #define SYM 2
 #define NUM 3
 #define FUN 4
+#define MOU 5
 
 /* Mod Sequence (Outer to Inner) */
 #define M0 LGUI
@@ -113,7 +117,7 @@
             >;  
         };
 
-        sym {
+        sym_layer {
             bindings = < 
                 &none     &none     &kp STAR  &kp DLLR  &kp AMPS  &kp PRCNT &kp AT    &kp COLON &kp SEMI  &none   
                 &kp EQUAL &kp GRAVE &kp MINUS &kp FSLH  &kp HASH  &none     &kp M3    &kp M2    &kp M1    &kp M0
@@ -132,13 +136,22 @@
             >;  
         };    
 
-        fun {
+        fun_layer {
             bindings = <
-                &bootloader &kp C_VOL_UP &kp C_MUTE &kp C_VOL_DN &kp C_SLEEP &kp K_LOCK &kp C_BRI_DN     &none  &kp C_BRI_UP    &none
+                &bootloader &kp C_VOL_UP &kp C_MUTE &kp C_VOL_DN &kp C_SLEEP &kp K_LOCK &none     &mmv MOVE_UP  &kp C_BRI_UP    &none
                 &sys_reset  &bt BT_PRV   &bt BT_CLR &bt BT_NXT   &none    &none     &none     &none  &none    &none
                             &kp C_PREV   &kp C_PLAY &kp C_NEXT       &none  &none    &none
                                 &mo 0     &mo 0  &none    &none
             >;
-        };          
+        };              
+        mouse_layer {
+            bindings = <    
+                &none   &none   &none   &none   &none   &kp PG_UP   &mmv MOVE_UP   &kp PG_UP   &   
+                &none   &none   &none   &none   &none   &msc SCRL_LEFT   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &msc SCRL_RIGHT
+                        &none   &none   &none              &mkp MB1   &mkp MB2   &mkp MB3      
+                            &none   &none   &msc SCRL_UP  &msc SCRL_DOWN
+
+            >;
+        };
     };
 };
