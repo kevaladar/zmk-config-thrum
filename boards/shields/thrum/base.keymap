@@ -139,18 +139,18 @@
 
         fun_layer {
             bindings = <
-                &bootloader &kp C_VOL_UP &kp C_MUTE &kp C_VOL_DN &kp C_SLEEP &kp K_LOCK &none     &mmv MOVE_UP  &kp C_BRI_UP    &none
-                &sys_reset  &bt BT_PRV   &bt BT_CLR &bt BT_NXT   &none    &none     &none     &none  &none    &none
+                &bootloader &kp C_VOL_UP &kp C_MUTE &kp C_VOL_DN &kp C_SLEEP &kp K_LOCK &none     &none  &kp C_BRI_UP    &none
+                &sys_reset  &none  &none    &none   &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
                             &kp C_PREV   &kp C_PLAY &kp C_NEXT       &none  &none    &none
                                 &mo 0     &mo 0  &none    &none
             >;
         };              
         mouse_layer {
             bindings = <    
-                &none   &none   &none   &none   &none   &kp PG_UP   &mmv MOVE_UP   &kp PG_UP   &none   
-                &none   &none   &none   &none   &none   &msc SCRL_LEFT   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &msc SCRL_RIGHT
+                &none   &none   &none   &none   &none   &kp PG_UP   U_MS_U   &kp PG_UP   &none   
+                &none   &none   &none   &none   &none   U_WH_L   U_MS_L   U_MS_D   U_MS_R   U_WH_R
                         &none   &none   &none              &mkp MB1   &mkp MB2   &mkp MB3      
-                            &none   &none   &msc SCRL_UP  &msc SCRL_DOWN
+                            &none   &none   U_WH_U  U_WH_D
 
             >;
         };
