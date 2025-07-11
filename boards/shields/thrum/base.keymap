@@ -146,7 +146,7 @@
         };              
         mouse_layer {
             bindings = <    
-                &none   &none   &none   &none   &none   &kp PG_UP   &mmv MOVE_UP   &kp PG_UP   &   
+                &none   &none   &none   &none   &none   &kp PG_UP   &mmv MOVE_UP   &kp PG_UP   &none   
                 &none   &none   &none   &none   &none   &msc SCRL_LEFT   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &msc SCRL_RIGHT
                         &none   &none   &none              &mkp MB1   &mkp MB2   &mkp MB3      
                             &none   &none   &msc SCRL_UP  &msc SCRL_DOWN
